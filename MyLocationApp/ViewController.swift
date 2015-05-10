@@ -7,14 +7,35 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, CLLocationManagerDelegate {
+  
+  let locationManager = CLLocationManager()
+  
+  @IBOutlet weak var latitudeLabel: UILabel!
+  @IBOutlet weak var longitudeLabel: UILabel!
+  @IBOutlet weak var accuracyLabel: UILabel!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    locationManager.delegate = self
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    locationManager.requestAlwaysAuthorization()
+    locationManager.startUpdatingLocation()
+    NSLog("loaded")
   }
-
+  
+  func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    self.latitudeLabel.text = manager.location.coordinate.latitude.description
+    self.longitudeLabel.text = manager.location.coordinate.longitude.description
+    self.accuracyLabel.text = manager.location.horizontalAccuracy.description + "m"
+  }
+  
+  func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+    NSLog("Error while updating location " + error.localizedDescription)
+  }
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.

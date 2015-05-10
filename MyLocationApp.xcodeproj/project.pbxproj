@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3807DA831AFF803800041A86 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3807DA821AFF803800041A86 /* CoreLocation.framework */; };
 		382694BB1AFF6B2B0025AA81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382694BA1AFF6B2B0025AA81 /* AppDelegate.swift */; };
 		382694BD1AFF6B2B0025AA81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382694BC1AFF6B2B0025AA81 /* ViewController.swift */; };
 		382694C01AFF6B2B0025AA81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 382694BE1AFF6B2B0025AA81 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3807DA821AFF803800041A86 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		382694B51AFF6B2B0025AA81 /* MyLocationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		382694B91AFF6B2B0025AA81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		382694BA1AFF6B2B0025AA81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3807DA831AFF803800041A86 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +62,7 @@
 		382694AC1AFF6B2B0025AA81 = {
 			isa = PBXGroup;
 			children = (
+				3807DA821AFF803800041A86 /* CoreLocation.framework */,
 				382694B71AFF6B2B0025AA81 /* MyLocationApp */,
 				382694CD1AFF6B2B0025AA81 /* MyLocationAppTests */,
 				382694B61AFF6B2B0025AA81 /* Products */,
@@ -411,6 +415,7 @@
 				382694D61AFF6B2B0025AA81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		382694D71AFF6B2B0025AA81 /* Build configuration list for PBXNativeTarget "MyLocationAppTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				382694D91AFF6B2B0025AA81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
